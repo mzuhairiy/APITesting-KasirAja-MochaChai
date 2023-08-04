@@ -1,33 +1,35 @@
 const request = require("supertest");
 const { expect } = require("chai");
 
+const baseUrlKA = "https://kasir-api.belajarqa.com"
+
+async function getToken(payload){
+    const response = await request(baseUrlKA)
+    .post("/authentications")
+    .send(payload)
+    return response
+}
+
 describe('Login Feature', () => {
     it('Success Login', async () => {
-        const response = await request("https://kasir-api.belajarqa.com")
-        .post("/authentications")
-        .send({
+        const payload = {
+            /* --This is Payload-- */
             "email": "next@ex.com",
-            "password": "123@ad",
-        })
-        // console.log((await response).status);
-        // console.log((await response).body);
-
+            "password": "123@ad", 
+        }
+        const response = await getToken(payload)
         //ASSERTION
         expect((await response).status).to.equal(201);
         expect((await response).body.message).to.equal('Authentication berhasil ditambahkan');
-    });
+    })
 
     it('Failed Login', async () => {
-        const response = await request("https://kasir-api.belajarqa.com")
-        .post("/authentications")
-        .send({
+        const payload = {
             "email": "next@ex.com",
-            "password": "123@asd",
-        })
-        // console.log((await response).status);
-        // console.log((await response).body);
-
-        //ASSERTION
+            "password": "123@ads", /* this is a payload */
+        }
+        const response = await getToken(payload)
+        /* --This is Assertion-- */
         expect((await response).status).to.equal(401);
         expect((await response).body.message).to.equal('Kredensial yang Anda berikan salah');
     })
