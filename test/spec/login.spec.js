@@ -18,7 +18,7 @@ describe('Login Feature', () => {
             "password": "123@ad", 
         }
         const response = await getToken(payload)
-        //ASSERTION
+        /* --This is Assertion-- */
         expect((await response).status).to.equal(201);
         expect((await response).body.message).to.equal('Authentication berhasil ditambahkan');
     })
@@ -26,7 +26,7 @@ describe('Login Feature', () => {
     it('Failed Login', async () => {
         const payload = {
             "email": "next@ex.com",
-            "password": "123@ads", /* this is a payload */
+            "password": "123@ads",
         }
         const response = await getToken(payload)
         /* --This is Assertion-- */
