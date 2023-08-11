@@ -15,6 +15,6 @@ Used framework : mocha, chai, supertest
 -Open terminal  
 -Input -> npm install, klik enter
 
-3. Run program :
--Open terminal
+3. Run program :  
+-Open terminal  
 -Input -> npx mocha {{filePath}}
