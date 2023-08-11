@@ -6,8 +6,8 @@ describe('Create Unit', () => {
     it('Success create a new unit', async () => {
         const token = await getToken()
         const payload = {
-                "name": "KG",
-                "description": "weight measurement"
+            "name": "KG",
+            "description": "weight measurement"
         }
         const response = await createUnit(payload,token)
         expect((await response).status).to.equal(201);
