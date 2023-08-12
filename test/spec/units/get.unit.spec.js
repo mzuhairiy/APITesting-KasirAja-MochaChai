@@ -1,9 +1,14 @@
 const request = require("supertest");
 const config = require("../../../data/config.json");
-const unitId = "1f35b35d-4138-440e-b11e-8244de9e4435" 
+const unitData = require("../../../data/unit.data.json");
 
-async function getUnit(){
-    const response = await request(config.baseUrlKA)
-    .post("/units/"+unitId)
-    .send()
+async function getUnitId(){
+    const response = await request(config.baseUrlKA) 
+    .post('/units')
+    .send(unitData)
+    .set("Authorization", `Bearer ${token}`)
+    const unitId = await response.body.data.unitId
+    return unitId
 }
+
+module.exports = { getUnitId } 
