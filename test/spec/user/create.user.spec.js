@@ -1,5 +1,5 @@
 const request = require("supertest");
-const config = require('../../data/config.json');
+const config = require('../../../data/config.json');
 
 async function createUser(payload,token){
     const response = await request(config.baseUrlKA)
