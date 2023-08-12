@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "message": "Category berhasil ditambahkan",
+  "data": {
+    "categoryId": "354f2bdf-6b46-4c2a-8146-eba2e163d35c",
+    "name": "Makanan Berat"
+  }
+}
