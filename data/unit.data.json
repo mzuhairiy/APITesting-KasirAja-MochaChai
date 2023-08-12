@@ -1,4 +1,8 @@
 {
-    "name": "KG",
-    "description": "weight measurement"
+  "status": "success",
+  "message": "Unit berhasil ditambahkan",
+  "data": {
+    "unitId": "697a94ec-d0ff-404a-a32e-636b4a32aca2",
+    "name": "KG"
+  }
 }
