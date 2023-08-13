@@ -41,7 +41,7 @@ describe('Create Category', () => {
 
     })
 
-    it('should update the unit', async() => {
+    it('should update a unit', async() => {
         const token = await getToken()
         const payload = {
             "name": "Makanan sedang",
@@ -68,5 +68,5 @@ describe('Create Category', () => {
         expect((await response).status).equal(200);
         expect((await response).body).to.be.an('object');
         //console.log((await response).body)
-    })
-})
+    });
+});
