@@ -40,7 +40,7 @@ describe('Unit feature', () => {
         //console.log((await response).body);
     })
 
-    it('should update the unit', async() => {
+    it('should update a unit', async() => {
         const token = await getToken()
         const payload = {
             "name": "Kiloan",
@@ -48,6 +48,7 @@ describe('Unit feature', () => {
         }
         const response = await updateUnit(payload,token)
         const jsonData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
+        console.log((await response).body);
         const name = await response.body.data.name; //mengambil value dari name di response body
         jsonData.data.name = name; //mengirim value name ke dalam file JSON
         fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2)) //menyimpan value name ke dalam file JSON

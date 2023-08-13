@@ -1,4 +1,8 @@
 {
-    "email": "next@ex.com",
-    "password": "123@ad" 
+  "status": "success",
+  "message": "User berhasil ditambahkan",
+  "data": {
+    "userId": "b953806e-c44a-4f65-9696-3d4760377c4d",
+    "name": "kasir cabang 1"
+  }
 }

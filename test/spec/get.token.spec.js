@@ -1,5 +1,5 @@
 const request = require("supertest");
-const userData = require('../../data/user.data.json');
+const userData = require('../../data/login.data.json');
 const config = require('../../data/config.json')
 
 async function getToken(){

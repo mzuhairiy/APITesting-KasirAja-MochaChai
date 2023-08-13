@@ -4,8 +4,8 @@ const fs = require("fs");
 const jsonPath = 'D:/zuhair-sanbercode/js-automation/data/category.data.json'
 const { expect } = require("chai");
 const { getToken } = require("../test/spec/get.token.spec");
-const { createCat } = require("../test/spec/categories/create.category");
-const { updateCategory } = require("../test/spec/categories/update.category");
+const { createCat } = require("../test/spec/categories/create.category.spec");
+const { updateCategory } = require("../test/spec/categories/update.category.spec");
 
 describe('Create Category', () => {
     it('should create a new category', async () => {

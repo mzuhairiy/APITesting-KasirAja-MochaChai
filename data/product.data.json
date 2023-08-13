@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "message": "Category berhasil ditambahkan",
+  "data": {
+    "categoryId": "e5324f6d-83f2-490e-b5ba-70a78f8fc493",
+    "name": "Good Time Cookies",
+    "productId": "a1dc2821-58fc-4998-9cfa-275364cd9647"
+  }
+}
